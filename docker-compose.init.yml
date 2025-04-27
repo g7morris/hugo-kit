@@ -1,0 +1,13 @@
+# For scaffolding a new Hugo site
+services:
+  hugo-init:
+    image: ghcr.io/hugomods/hugo:latest
+    container_name: hugo-site-init
+    volumes:
+      - ./${HUGO_SITE_DIR}:/site
+    working_dir: /site
+    entrypoint: ""
+    command: hugo new site .
+    env_file:
+      - .env
+    

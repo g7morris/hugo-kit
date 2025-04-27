@@ -1,0 +1,14 @@
+# For ongoing development of an existing Hugo site
+
+services:
+  hugo:
+    image: ghcr.io/hugomods/hugo:latest
+    container_name: hugo-site
+    ports:
+      - "1313:1313"
+    volumes:
+      - ./${HUGO_SITE_DIR}:/site
+    working_dir: /site
+    command: server --bind 0.0.0.0 --baseURL=http://localhost:1313 --buildDrafts --buildFuture
+    env_file:
+      - .env
