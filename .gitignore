@@ -1,6 +1,8 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
+# Hugo and Blowfish
+public/
+resources/
+exampleSite/resources/
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -17,6 +19,22 @@
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
+#others
+node_modules
+.hugo_build.lock
+.cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea
+.Ulysses-Group.plist
+.Ulysses-Settings.plist
+Thumbs.db
+
 # Go workspace file
 go.work
 go.work.sum
@@ -24,14 +42,5 @@ go.work.sum
 # env file
 .env
 
-# Hugo build artifacts
-public/
-resources/
-.hugo_build.lock
-
-# Node, if you add JS stuff later
-node_modules/
-
-# OS crap
-.DS_Store
-Thumbs.db
+# Hugo site
+gavinmorris.tech/
